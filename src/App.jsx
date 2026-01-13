@@ -196,6 +196,10 @@ const Portfolio = () => {
     { name: 'Contact', id: 'contact' },
   ];
 
+  // --- UPDATED PROJECT DATA ---
+  // To use a video, upload the file to your 'public' folder and update:
+  // 1. modalSrc: "/your-video-name.mp4"
+  // 2. modalType: "video"
   const projects = [
     {
       title: "Eco-Responsibility AR Experience",
@@ -203,8 +207,13 @@ const Portfolio = () => {
       description: "A responsive spatial environment created using Adobe Aero to bridge the gap between technology and nature. Proved that gamified AR storytelling significantly outperforms static media in promoting ecological understanding.",
       tools: ["Adobe Aero", "Blender", "Interactive Design"],
       color: "from-green-500 to-emerald-700",
-      mediaType: "image", 
-      mediaSrc: "https://placehold.co/800x600/064e3b/34d399?text=AR+Nature+Experience"
+      
+      // Card Thumbnail
+      thumbnailSrc: "/image_1d075b.png", 
+      
+      // Modal Content (Change this to your video file path)
+      modalSrc: "/image_1d075b.png", // e.g. "/ar_demo.mp4"
+      modalType: "image" // Change to "video" if using a video file
     },
     {
       title: "Soulfest Projection Mapping",
@@ -212,8 +221,13 @@ const Portfolio = () => {
       description: "Animated kinetic typography in After Effects, mapped to a building façade for the 'Malaysian Slang' competition entry. Featured intricate vector designs created in Illustrator.",
       tools: ["After Effects", "Illustrator", "Projection Mapping"],
       color: "from-purple-500 to-indigo-700",
-      mediaType: "image",
-      mediaSrc: "https://placehold.co/800x600/4c1d95/a78bfa?text=Projection+Mapping"
+      
+      // Card Thumbnail
+      thumbnailSrc: "/image_1d64f5.png",
+      
+      // Modal Content
+      modalSrc: "/image_1d64f5.png", // e.g. "/mapping_showreel.mp4"
+      modalType: "image"
     },
     {
       title: "Durioo Studio Content",
@@ -221,8 +235,27 @@ const Portfolio = () => {
       description: "Managed end-to-end editing workflow for animated series viewed by thousands of subscribers. Ensured brand consistency and synchronized audio-visual elements for broadcast.",
       tools: ["Premiere Pro", "After Effects", "Audio Sync"],
       color: "from-red-500 to-orange-700",
-      mediaType: "image",
-      mediaSrc: "https://placehold.co/800x600/7f1d1d/fca5a5?text=Durioo+Studio+Work"
+      
+      // Card Thumbnail
+      thumbnailSrc: "/image_1d7053.png",
+      
+      // Modal Content
+      modalSrc: "/image_1d7053.png", // e.g. "/durioo_edit.mp4"
+      modalType: "image"
+    },
+    {
+      title: "Creative Illustration Series",
+      category: "Illustration",
+      description: "A showcase of vector-based character designs and digital art. Features stylized portraits and concept art created with precision in Adobe Illustrator, demonstrating a keen eye for color and form.",
+      tools: ["Adobe Illustrator", "Digital Painting", "Character Design"],
+      color: "from-pink-500 to-rose-700",
+      
+      // Card Thumbnail - UPLOAD AN IMAGE AND UPDATE THIS PATH
+      thumbnailSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art",
+      
+      // Modal Content
+      modalSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Detail",
+      modalType: "image"
     }
   ];
 
@@ -274,16 +307,16 @@ const Portfolio = () => {
             </button>
             
             <div className="w-full bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh]">
-               {selectedProject.mediaType === 'video' ? (
+               {selectedProject.modalType === 'video' ? (
                   <video 
-                    src={selectedProject.mediaSrc} 
+                    src={selectedProject.modalSrc} 
                     controls 
                     autoPlay 
                     className="w-full h-full object-contain max-h-[70vh]" 
                   />
                ) : (
                   <img 
-                    src={selectedProject.mediaSrc} 
+                    src={selectedProject.modalSrc} 
                     alt={selectedProject.title} 
                     className="w-full h-full object-contain max-h-[70vh]" 
                   />
@@ -572,7 +605,8 @@ const Portfolio = () => {
             </a>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Changed grid layout to 2 columns on all medium+ screens for a 2x2 look */}
+          <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
               <div 
                 key={idx} 
@@ -589,7 +623,7 @@ const Portfolio = () => {
                      />
                    ) : (
                      <img 
-                       src={project.mediaSrc} 
+                       src={project.thumbnailSrc} 
                        alt={project.title}
                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                      />
