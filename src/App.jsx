@@ -665,9 +665,13 @@ const Portfolio = () => {
             </a>
           </div>
 
-          <button className="px-8 py-4 bg-transparent border border-slate-600 hover:bg-slate-800/80 hover:border-slate-500 text-slate-300 rounded-full font-bold flex items-center gap-2 mx-auto transition-all backdrop-blur-sm">
+          <a 
+            href="/RESUME_GRAPHIC_DESIGN_FARIZFAIZ.pdf" 
+            download="RESUME_GRAPHIC_DESIGN_FARIZFAIZ.pdf"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-slate-600 hover:bg-slate-800/80 hover:border-slate-500 text-slate-300 rounded-full font-bold transition-all backdrop-blur-sm cursor-pointer"
+          >
             <Download size={20} /> Download Resume
-          </button>
+          </a>
         </div>
       </section>
 
