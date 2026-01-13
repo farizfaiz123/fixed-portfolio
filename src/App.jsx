@@ -644,12 +644,12 @@ const Portfolio = () => {
               </div>
             </a>
 
-            <a href="tel:+60197713321" className="p-6 bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors flex flex-col items-center gap-4 group">
+            <a href="https://wa.me/60197713321" target="_blank" rel="noreferrer" className="p-6 bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-cyan-500 transition-colors flex flex-col items-center gap-4 group">
               <div className="p-4 bg-slate-900 rounded-full group-hover:bg-cyan-500/20 group-hover:text-cyan-400 transition-colors">
                 <Phone size={24} />
               </div>
               <div>
-                <div className="text-sm text-slate-500 mb-1">Phone</div>
+                <div className="text-sm text-slate-500 mb-1">WhatsApp</div>
                 <div className="font-bold">+60-197713321</div>
               </div>
             </a>
