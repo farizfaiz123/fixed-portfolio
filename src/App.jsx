@@ -4,9 +4,6 @@ import {
   X, 
   Mail, 
   Phone, 
-  ExternalLink, 
-  Download, 
-  Play, 
   Layers, 
   PenTool, 
   Video, 
@@ -14,7 +11,10 @@ import {
   Briefcase, 
   GraduationCap,
   ChevronDown,
-  Maximize2
+  Maximize2,
+  Play,
+  ExternalLink,
+  Download
 } from 'lucide-react';
 
 // --- Background Animation Component ---
@@ -390,11 +390,17 @@ const Portfolio = () => {
             <div className="md:w-1/2">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-lg opacity-30"></div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-700 flex items-center justify-center backdrop-blur-md">
-                   <div className="text-center p-8">
-                     <span className="text-6xl mb-4 block">👋</span>
-                     <p className="text-slate-400 italic">"Visuals speak louder than words."</p>
-                   </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-700 flex items-center justify-center backdrop-blur-md group">
+                   {/* Corrected Profile Image */}
+                   <img 
+                     src="/AUDG5UDLL5R51IN6JE2T.jpg" 
+                     alt="Fariz Faiz" 
+                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                     onError={(e) => {
+                       e.target.onerror = null; 
+                       e.target.src = "https://placehold.co/400x400/1e293b/cbd5e1?text=Profile+Image";
+                     }}
+                   />
                 </div>
               </div>
             </div>
