@@ -229,9 +229,9 @@ const Portfolio = () => {
       // 2. EDIT THIS GALLERY for the popup media (images or videos)
       gallery: [
         // Slide 1
-        { type: "image", src: "/image_1d075b.png" }, // <--- CHANGE THIS LINE
+        { type: "video", src: "/Penyuu.mp4" }, // <--- CHANGE THIS LINE
         // Slide 2
-        { type: "image", src: "https://placehold.co/1920x1080/064e3b/34d399?text=Process+Shot" } 
+        { type: "video", src: "/kilang.mp4" } 
       ]
     },
     {
@@ -776,6 +776,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
