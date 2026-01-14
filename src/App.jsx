@@ -246,8 +246,8 @@ const Portfolio = () => {
       
       // 2. EDIT THIS GALLERY
       gallery: [
-        { type: "image", src: "/image_1d64f5.png" }, // <--- CHANGE THIS LINE
-        { type: "image", src: "https://placehold.co/1920x1080/4c1d95/a78bfa?text=Concept+Art" }
+        { type: "video", src: "/soulfest faiz (1).mp4" }, // <--- CHANGE THIS LINE
+        { type: "video", src: "Final Submission 17_1_24 (17 Jan 2024 at 15_10)" }
       ]
     },
     {
@@ -278,7 +278,7 @@ const Portfolio = () => {
       
       // 2. EDIT THIS GALLERY
       gallery: [
-        { type: "image", src: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art" }, // <--- CHANGE THIS LINE
+        { type: "image", src: "IMG_1135.png" }, // <--- CHANGE THIS LINE
         { type: "image", src: "https://placehold.co/600x400/be185d/fff1f2?text=Sketches" }
       ]
     }
@@ -777,5 +777,6 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
