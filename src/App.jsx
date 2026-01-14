@@ -14,7 +14,9 @@ import {
   Maximize2,
   Play,
   ExternalLink,
-  Download
+  Download,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 // --- Background Animation Component ---
@@ -144,6 +146,7 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null); // State for the active modal
+  const [currentSlide, setCurrentSlide] = useState(0); // Carousel State
 
   // Set Page Title
   useEffect(() => {
@@ -187,6 +190,20 @@ const Portfolio = () => {
     }
   };
 
+  const nextSlide = (e) => {
+    e.stopPropagation();
+    if (selectedProject && selectedProject.gallery) {
+        setCurrentSlide((prev) => (prev + 1) % selectedProject.gallery.length);
+    }
+  };
+
+  const prevSlide = (e) => {
+    e.stopPropagation();
+    if (selectedProject && selectedProject.gallery) {
+        setCurrentSlide((prev) => (prev === 0 ? selectedProject.gallery.length - 1 : prev - 1));
+    }
+  };
+
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
@@ -196,10 +213,8 @@ const Portfolio = () => {
     { name: 'Contact', id: 'contact' },
   ];
 
-  // --- UPDATED PROJECT DATA ---
-  // To use a video, upload the file to your 'public' folder and update:
-  // 1. modalSrc: "/your-video-name.mp4"
-  // 2. modalType: "video"
+  // --- UPDATED PROJECT DATA FOR CAROUSEL ---
+  // Use the 'gallery' array to add multiple media items per project
   const projects = [
     {
       title: "Eco-Responsibility AR Experience",
@@ -208,12 +223,16 @@ const Portfolio = () => {
       tools: ["Adobe Aero", "Blender", "Interactive Design"],
       color: "from-green-500 to-emerald-700",
       
-      // Card Thumbnail
-      thumbnailSrc: "/image_1d075b.png", 
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "/image_1d075b.png", // <--- CHANGE THIS LINE (File must be in 'public' folder)
       
-      // Modal Content (Change this to your video file path)
-      modalSrc: "/image_1d075b.png", // e.g. "/ar_demo.mp4"
-      modalType: "image" // Change to "video" if using a video file
+      // 2. EDIT THIS GALLERY for the popup media (images or videos)
+      gallery: [
+        // Slide 1
+        { type: "image", src: "/image_1d075b.png" }, // <--- CHANGE THIS LINE
+        // Slide 2
+        { type: "image", src: "https://placehold.co/1920x1080/064e3b/34d399?text=Process+Shot" } 
+      ]
     },
     {
       title: "Soulfest Projection Mapping",
@@ -222,12 +241,14 @@ const Portfolio = () => {
       tools: ["After Effects", "Illustrator", "Projection Mapping"],
       color: "from-purple-500 to-indigo-700",
       
-      // Card Thumbnail
-      thumbnailSrc: "/image_1d64f5.png",
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "/image_1d64f5.png", // <--- CHANGE THIS LINE
       
-      // Modal Content
-      modalSrc: "/image_1d64f5.png", // e.g. "/mapping_showreel.mp4"
-      modalType: "image"
+      // 2. EDIT THIS GALLERY
+      gallery: [
+        { type: "image", src: "/image_1d64f5.png" }, // <--- CHANGE THIS LINE
+        { type: "image", src: "https://placehold.co/1920x1080/4c1d95/a78bfa?text=Concept+Art" }
+      ]
     },
     {
       title: "Durioo Studio Content",
@@ -236,12 +257,14 @@ const Portfolio = () => {
       tools: ["Premiere Pro", "After Effects", "Audio Sync"],
       color: "from-red-500 to-orange-700",
       
-      // Card Thumbnail
-      thumbnailSrc: "/image_1d7053.png",
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "/image_1d7053.png", // <--- CHANGE THIS LINE
       
-      // Modal Content
-      modalSrc: "/image_1d7053.png", // e.g. "/durioo_edit.mp4"
-      modalType: "image"
+      // 2. EDIT THIS GALLERY
+      gallery: [
+        { type: "image", src: "/image_1d7053.png" }, // <--- CHANGE THIS LINE
+        { type: "image", src: "/unnamed.png" } // <--- Added your new image here
+      ]
     },
     {
       title: "Creative Illustration Series",
@@ -250,12 +273,14 @@ const Portfolio = () => {
       tools: ["Adobe Illustrator", "Digital Painting", "Character Design"],
       color: "from-pink-500 to-rose-700",
       
-      // Card Thumbnail - UPLOAD AN IMAGE AND UPDATE THIS PATH
-      thumbnailSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art",
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art", // <--- CHANGE THIS LINE
       
-      // Modal Content
-      modalSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Detail",
-      modalType: "image"
+      // 2. EDIT THIS GALLERY
+      gallery: [
+        { type: "image", src: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art" }, // <--- CHANGE THIS LINE
+        { type: "image", src: "https://placehold.co/600x400/be185d/fff1f2?text=Sketches" }
+      ]
     }
   ];
 
@@ -301,25 +326,62 @@ const Portfolio = () => {
           >
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-red-500/80 rounded-full text-white transition-all transform hover:scale-110"
+              className="absolute top-4 right-4 z-20 p-2 bg-black/50 hover:bg-red-500/80 rounded-full text-white transition-all transform hover:scale-110"
             >
               <X size={24} />
             </button>
             
-            <div className="w-full bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh]">
-               {selectedProject.modalType === 'video' ? (
+            {/* Carousel Media Display */}
+            <div className="w-full bg-black relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh] overflow-hidden group">
+               
+               {/* Previous Slide Button */}
+               {selectedProject.gallery.length > 1 && (
+                 <button 
+                   onClick={prevSlide}
+                   className="absolute left-4 z-10 p-3 bg-black/40 hover:bg-cyan-500 text-white rounded-full transition-all opacity-0 group-hover:opacity-100"
+                 >
+                   <ChevronLeft size={32} />
+                 </button>
+               )}
+
+               {/* Current Slide Media */}
+               {selectedProject.gallery[currentSlide].type === 'video' ? (
                   <video 
-                    src={selectedProject.modalSrc} 
+                    key={currentSlide} // Key forces re-render on slide change
+                    src={selectedProject.gallery[currentSlide].src} 
                     controls 
                     autoPlay 
                     className="w-full h-full object-contain max-h-[70vh]" 
                   />
                ) : (
                   <img 
-                    src={selectedProject.modalSrc} 
-                    alt={selectedProject.title} 
-                    className="w-full h-full object-contain max-h-[70vh]" 
+                    key={currentSlide}
+                    src={selectedProject.gallery[currentSlide].src} 
+                    alt={`${selectedProject.title} slide ${currentSlide + 1}`} 
+                    className="w-full h-full object-contain max-h-[70vh] animate-in fade-in duration-300" 
                   />
+               )}
+
+               {/* Next Slide Button */}
+               {selectedProject.gallery.length > 1 && (
+                 <button 
+                   onClick={nextSlide}
+                   className="absolute right-4 z-10 p-3 bg-black/40 hover:bg-cyan-500 text-white rounded-full transition-all opacity-0 group-hover:opacity-100"
+                 >
+                   <ChevronRight size={32} />
+                 </button>
+               )}
+
+               {/* Slide Indicators */}
+               {selectedProject.gallery.length > 1 && (
+                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                   {selectedProject.gallery.map((_, index) => (
+                     <div 
+                       key={index} 
+                       className={`w-2 h-2 rounded-full transition-all ${index === currentSlide ? 'bg-cyan-500 w-6' : 'bg-white/50'}`}
+                     />
+                   ))}
+                 </div>
                )}
             </div>
             
@@ -331,6 +393,12 @@ const Portfolio = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-slate-100">{selectedProject.title}</h3>
                  </div>
+                 {/* Page Counter */}
+                 {selectedProject.gallery.length > 1 && (
+                   <div className="text-slate-500 text-sm font-mono">
+                     {currentSlide + 1} / {selectedProject.gallery.length}
+                   </div>
+                 )}
               </div>
               <p className="text-slate-300 leading-relaxed mb-6 text-lg">{selectedProject.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -611,30 +679,18 @@ const Portfolio = () => {
               <div 
                 key={idx} 
                 className="group relative bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-900/20 backdrop-blur-sm cursor-pointer transform hover:-translate-y-2"
-                onClick={() => setSelectedProject(project)}
+                onClick={() => { setSelectedProject(project); setCurrentSlide(0); }}
               >
                 <div className="h-48 w-full relative overflow-hidden">
-                   {project.mediaType === 'video' ? (
-                     <video 
-                       src={project.mediaSrc}
-                       className="w-full h-full object-cover"
-                       muted
-                       playsInline
-                     />
-                   ) : (
-                     <img 
-                       src={project.thumbnailSrc} 
-                       alt={project.title}
-                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                     />
-                   )}
+                   {/* Thumbnail only on card */}
+                   <img 
+                     src={project.thumbnailSrc} 
+                     alt={project.title}
+                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                   />
                    <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-40 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300`} />
                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
-                      {project.mediaType === 'video' ? (
-                        <Play className="text-white fill-current drop-shadow-lg" size={48} />
-                      ) : (
-                        <Maximize2 className="text-white drop-shadow-lg" size={48} />
-                      )}
+                      <Maximize2 className="text-white drop-shadow-lg" size={48} />
                    </div>
                 </div>
                 
