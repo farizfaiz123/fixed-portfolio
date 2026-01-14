@@ -757,10 +757,11 @@ const Portfolio = () => {
 
           <a 
             href="/RESUME_GRAPHIC_DESIGN_FARIZFAIZ.pdf" 
-            download="RESUME_GRAPHIC_DESIGN_FARIZFAIZ.pdf"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-slate-600 hover:bg-slate-800/80 hover:border-slate-500 text-slate-300 rounded-full font-bold transition-all backdrop-blur-sm cursor-pointer"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-slate-900 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/25 backdrop-blur-sm cursor-pointer"
           >
-            <Download size={20} /> Download Resume
+            <Eye size={20} /> Review Resume
           </a>
         </div>
       </section>
@@ -777,6 +778,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
