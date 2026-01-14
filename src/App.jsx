@@ -224,7 +224,7 @@ const Portfolio = () => {
       color: "from-green-500 to-emerald-700",
       
       // 1. EDIT THIS LINE for the main card image
-      thumbnailSrc: "/image_1d075b.png", // <--- CHANGE THIS LINE (File must be in 'public' folder)
+      thumbnailSrc: "/3D.png", // <--- CHANGE THIS LINE (File must be in 'public' folder)
       
       // 2. EDIT THIS GALLERY for the popup media (images or videos)
       gallery: [
@@ -242,7 +242,7 @@ const Portfolio = () => {
       color: "from-purple-500 to-indigo-700",
       
       // 1. EDIT THIS LINE for the main card image
-      thumbnailSrc: "/image_1d64f5.png", // <--- CHANGE THIS LINE
+      thumbnailSrc: "/MOTION DESIGN.png", // <--- CHANGE THIS LINE
       
       // 2. EDIT THIS GALLERY
       gallery: [
@@ -258,7 +258,7 @@ const Portfolio = () => {
       color: "from-red-500 to-orange-700",
       
       // 1. EDIT THIS LINE for the main card image
-      thumbnailSrc: "/image_1d7053.png", // <--- CHANGE THIS LINE
+      thumbnailSrc: "/VIDEO EDITING.png", // <--- CHANGE THIS LINE
       
       // 2. EDIT THIS GALLERY
       gallery: [
@@ -274,7 +274,7 @@ const Portfolio = () => {
       color: "from-pink-500 to-rose-700",
       
       // 1. EDIT THIS LINE for the main card image
-      thumbnailSrc: "https://placehold.co/600x400/be185d/fff1f2?text=Illustration+Art", // <--- CHANGE THIS LINE
+      thumbnailSrc: "/ILLUSTRATION.png", // <--- CHANGE THIS LINE
       
       // 2. EDIT THIS GALLERY
       gallery: [
@@ -777,4 +777,5 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
