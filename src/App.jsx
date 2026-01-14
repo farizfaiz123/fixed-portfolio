@@ -235,10 +235,10 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Soulfest Projection Mapping",
+      title: "Motion Design",
       category: "Motion Graphics",
-      description: "Animated kinetic typography in After Effects, mapped to a building façade for the 'Malaysian Slang' competition entry. Featured intricate vector designs created in Illustrator.",
-      tools: ["After Effects", "Illustrator", "Projection Mapping"],
+      description: "A dynamic motion graphics display featuring kinetic typography and complex vector art. Designed to leverage projection mapping techniques to transform physical spaces into immersive visual narratives.",
+      tools: ["After Effects", "Illustrator", "Motion Design"],
       color: "from-purple-500 to-indigo-700",
       
       // 1. EDIT THIS LINE for the main card image
@@ -247,6 +247,7 @@ const Portfolio = () => {
       // 2. EDIT THIS GALLERY
       gallery: [
         { type: "video", src: "/soulfest faiz (1).mp4" }, // <--- CHANGE THIS LINE
+        { type: "video", src: "/Final Submission 17 1 24 (17 Jan 2024 At 15 10).mp4" }
       ]
     },
     {
@@ -776,6 +777,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
