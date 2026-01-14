@@ -278,7 +278,7 @@ const Portfolio = () => {
       // 2. EDIT THIS GALLERY
       gallery: [
         { type: "image", src: "/IMG_1135.png" }, // <--- CHANGE THIS LINE
-        { type: "image", src: "/IMG_1214.png" }
+        { type: "image", src: "/IMG_1214.jpg" }
       ]
     }
   ];
@@ -776,6 +776,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
