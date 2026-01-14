@@ -247,7 +247,6 @@ const Portfolio = () => {
       // 2. EDIT THIS GALLERY
       gallery: [
         { type: "video", src: "/soulfest faiz (1).mp4" }, // <--- CHANGE THIS LINE
-        { type: "video", src: "Final Submission 17_1_24 (17 Jan 2024 at 15_10)" }
       ]
     },
     {
@@ -777,6 +776,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
