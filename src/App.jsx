@@ -277,8 +277,8 @@ const Portfolio = () => {
       
       // 2. EDIT THIS GALLERY
       gallery: [
-        { type: "image", src: "IMG_1135.png" }, // <--- CHANGE THIS LINE
-        { type: "image", src: "https://placehold.co/600x400/be185d/fff1f2?text=Sketches" }
+        { type: "image", src: "/IMG_1135.png" }, // <--- CHANGE THIS LINE
+        { type: "image", src: "/IMG_1214.png" }
       ]
     }
   ];
@@ -776,6 +776,7 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
 
