@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { 
   Menu, 
   X, 
@@ -772,6 +773,7 @@ const Portfolio = () => {
           <p className="mt-2">Designed & Developed with React & Tailwind</p>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 };
