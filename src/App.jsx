@@ -294,8 +294,8 @@ const Portfolio = () => {
       
       // 2. EDIT THIS GALLERY
       gallery: [
-        { type: "video", src: "Mental health awareness.mov" },
-        { type: "image", src: "Story of kindness.mov" }
+        { type: "video", src: "Mental health awareness.mp4" },
+        { type: "image", src: "Story of kindness.mp4" }
       ]
     }
   ];
