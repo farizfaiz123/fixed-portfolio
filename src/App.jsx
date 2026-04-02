@@ -283,7 +283,38 @@ const Portfolio = () => {
       ]
     }
   ];
-
+  title: "Creative Illustration Series",
+      category: "Illustration",
+      description: "A showcase of vector-based character designs and digital art. Features stylized portraits and concept art created with precision in Adobe Illustrator, demonstrating a keen eye for color and form.",
+      tools: ["Adobe Illustrator", "Digital Painting", "Character Design"],
+      color: "from-pink-500 to-rose-700",
+      
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "/ILLUSTRATION.png", // <--- CHANGE THIS LINE
+      
+      // 2. EDIT THIS GALLERY
+      gallery: [
+        { type: "image", src: "/1135.jpg" },      // <--- New Slide 1
+        { type: "image", src: "/IMG_1214.JPG" }   // <--- Previous image
+      ]
+    }
+  ];
+      title: "Visual Storytelling",
+      category: "Storytelling",
+      description: "Crafting compelling visual narratives through storyboarding, sequence planning, and creative direction. Ensuring every frame contributes to the core message and emotional arc of the project.",
+      tools: ["Storyboarding", "Creative Direction", "Narrative Planning"],
+      color: "from-cyan-400 to-blue-500",
+      
+      // 1. EDIT THIS LINE for the main card image
+      thumbnailSrc: "https://placehold.co/600x400/0ea5e9/e0f2fe?text=Visual+Storytelling", 
+      
+      // 2. EDIT THIS GALLERY
+      gallery: [
+        { type: "video", src: "Mental health awareness.mp4" },
+        { type: "image", src: "Story of kindness.mp4" }
+      ]
+    }
+  ];
   const experiences = [
     {
       company: "Durioo Studio",
