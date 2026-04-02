@@ -281,9 +281,9 @@ const Portfolio = () => {
         { type: "image", src: "/1135.jpg" },      // <--- New Slide 1
         { type: "image", src: "/IMG_1214.JPG" }   // <--- Previous image
       ]
-    }
-  ];
-  title: "Creative Illustration Series",
+    },
+    {
+      title: "Creative Illustration Series",
       category: "Illustration",
       description: "A showcase of vector-based character designs and digital art. Features stylized portraits and concept art created with precision in Adobe Illustrator, demonstrating a keen eye for color and form.",
       tools: ["Adobe Illustrator", "Digital Painting", "Character Design"],
@@ -297,8 +297,8 @@ const Portfolio = () => {
         { type: "image", src: "/1135.jpg" },      // <--- New Slide 1
         { type: "image", src: "/IMG_1214.JPG" }   // <--- Previous image
       ]
-    }
-  ];
+    },
+    {
       title: "Visual Storytelling",
       category: "Storytelling",
       description: "Crafting compelling visual narratives through storyboarding, sequence planning, and creative direction. Ensuring every frame contributes to the core message and emotional arc of the project.",
