@@ -74,7 +74,8 @@ const Portfolio = () => {
       thumbnailSrc: "/ILLUSTRATION.png", 
       gallery: [
         { type: "image", src: "/ILLUSTRATION.png" },
-        { type: "image", src: "/1135.jpg" },
+        { type: "image", src: "/colle poster 1.png" },
+        { type: "image", src: "/colle poster 2.png" },
         { type: "image", src: "/IMG_1135.PNG" }, 
         { type: "image", src: "/IMG_1214.JPG" }
       ]
