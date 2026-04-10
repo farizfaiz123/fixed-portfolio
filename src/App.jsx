@@ -67,15 +67,15 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Digital Character Art",
+      title: "Graphic Design",
       category: "Digital Illustration",
       description: "A collection of digital drawings, custom apparel designs, and cartoon characters. I love playing with vibrant colors and creating lively, expressive shapes that bring the characters to life.",
       tools: ["Adobe Illustrator", "Digital Painting", "Character Design"],
       thumbnailSrc: "/ILLUSTRATION.png", 
       gallery: [
         { type: "image", src: "/ILLUSTRATION.png" },
-        { type: "image", src: "/1135.jpg" },
         { type: "image", src: "/IMG_1135.PNG" }, 
+        { type: "image", src: "/IMG_1214.JPG" }
         { type: "image", src: "/IMG_1214.JPG" }
       ]
     },
@@ -89,17 +89,6 @@ const Portfolio = () => {
         { type: "image", src: "/3D.png" },
         { type: "video", src: "/Penyuu.mp4" },
         { type: "video", src: "/kilang.mp4" }
-      ]
-    },
-    {
-      title: "Creative Motion Capstone",
-      category: "Capstone Project",
-      description: "Final submission project combining various motion design disciplines, storytelling, and advanced visual effects to create a comprehensive visual narrative.",
-      tools: ["Creative Direction", "VFX", "Compositing"],
-      thumbnailSrc: "/Screenshot 2026-01-14 131207.png", 
-      gallery: [
-        { type: "image", src: "/Screenshot 2026-01-14 131207.png" },
-        { type: "video", src: "/Final Submission 17 1 24 (17 Jan 2024 At 15 10).mp4" }
       ]
     }
   ];
