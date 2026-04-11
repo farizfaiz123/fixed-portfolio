@@ -228,7 +228,7 @@ const Portfolio = () => {
           {/* Profile Picture Box */}
           <div className="md:col-span-1 lg:col-span-1 bg-zinc-900/50 border border-zinc-800/50 rounded-[2rem] overflow-hidden relative group">
             <img 
-              src="/AUDG5UDLL5R51IN6JE2T.jpg" 
+              src="/22.png" 
               alt="Fariz Faiz" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               onError={(e) => { e.target.src = "https://placehold.co/600x600/18181b/3f3f46?text=Fariz"; }}
