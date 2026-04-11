@@ -254,6 +254,8 @@ const Portfolio = () => {
                 </a>
                 <a href="https://www.behance.net/farizfaizz" target="_blank" rel="noreferrer" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
                   Behance <ExternalLink size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
+                <a href="www.linkedin.com/in/fariz-faiz" target="_blank" rel="noreferrer" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
+                  Linkedin<ExternalLink size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
                 </a>
               </div>
             </div>
