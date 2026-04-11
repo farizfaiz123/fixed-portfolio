@@ -249,13 +249,11 @@ const Portfolio = () => {
               <h3 className="text-white font-bold text-xl mb-1">Let's Talk</h3>
               <p className="text-zinc-500 text-sm mb-6">Always open to new projects.</p>
               <div className="flex flex-col gap-2">
-                <a href="mailto:farizfaiz7@gmail.com" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
-                  Email Me <ArrowUpRight size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
+                <a href="https://www.linkedin.com/in/farizfaizz" target="_blank" rel="noreferrer" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
+                  LinkedIn <ArrowUpRight size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
                 </a>
                 <a href="https://www.behance.net/farizfaizz" target="_blank" rel="noreferrer" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
                   Behance <ExternalLink size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
-                <a href="www.linkedin.com/in/fariz-faiz" target="_blank" rel="noreferrer" className="flex items-center justify-between px-4 py-3 bg-zinc-800/50 hover:bg-zinc-800 rounded-xl text-white text-sm font-bold transition-colors group">
-                  Linkedin<ExternalLink size={16} className="text-zinc-500 group-hover:text-white transition-colors"/>
                 </a>
               </div>
             </div>
@@ -271,10 +269,48 @@ const Portfolio = () => {
             <h3 className="text-white font-bold text-xl mb-8">Software & Expertise</h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {[
-                { icon: <Monitor size={28} />, label: "3D Modeling" },
-                { icon: <Video size={28} />, label: "Video Editing" },
-                { icon: <Layers size={28} />, label: "Motion Graphics" },
-                { icon: <PenTool size={28} />, label: "Illustration" },
+                { 
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                      <circle cx="10" cy="14" r="5" stroke="#f97316" strokeWidth="2.5" />
+                      <circle cx="10" cy="14" r="2.5" fill="#3b82f6" />
+                      <path d="M14 11L19 5" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                      <path d="M10 9V3" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                      <path d="M15 14h5" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" />
+                    </svg>
+                  ), 
+                  label: "Blender" 
+                },
+                { 
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24">
+                      <rect width="24" height="24" rx="4" fill="#2e1065" />
+                      <rect x="1" y="1" width="22" height="22" rx="3" fill="none" stroke="#c084fc" strokeWidth="1.5" />
+                      <text x="12" y="16.5" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif" fill="#c084fc" textAnchor="middle">Pr</text>
+                    </svg>
+                  ), 
+                  label: "Premiere Pro" 
+                },
+                { 
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24">
+                      <rect width="24" height="24" rx="4" fill="#1e1b4b" />
+                      <rect x="1" y="1" width="22" height="22" rx="3" fill="none" stroke="#a78bfa" strokeWidth="1.5" />
+                      <text x="12" y="16.5" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif" fill="#a78bfa" textAnchor="middle">Ae</text>
+                    </svg>
+                  ), 
+                  label: "After Effects" 
+                },
+                { 
+                  icon: (
+                    <svg width="28" height="28" viewBox="0 0 24 24">
+                      <rect width="24" height="24" rx="4" fill="#451a03" />
+                      <rect x="1" y="1" width="22" height="22" rx="3" fill="none" stroke="#f97316" strokeWidth="1.5" />
+                      <text x="12" y="16.5" fontSize="13" fontWeight="bold" fontFamily="Arial, sans-serif" fill="#f97316" textAnchor="middle">Ai</text>
+                    </svg>
+                  ), 
+                  label: "Illustrator" 
+                },
               ].map((skill, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center gap-3">
                   <div className="w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-300 shadow-inner border border-zinc-700/50">
