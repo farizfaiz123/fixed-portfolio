@@ -99,17 +99,17 @@ const Portfolio = () => {
       company: "Durioo Studio",
       role: "Video Editor (Intern)",
       period: "Apr 2025 - Jan 2026",
+    },
+    {
+      company: "Peveyhack",
+      role: "Graphic Designer (Intern)",
+      period: "Nov 2022 - Jan 2023",
     },
     {
       company: "Freelance",
       role: "Video Editor & Designer",
       period: "Present",
     },
-    {
-      company: "Peveyhack",
-      role: "Graphic Designer (Intern)",
-      period: "Nov 2022 - Jan 2023",
-    }
   ];
 
   return (
