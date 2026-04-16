@@ -50,7 +50,8 @@ const Portfolio = () => {
       thumbnailSrc: "/MOTION DESIGN.png",
       gallery: [
         { type: "image", src: "/MOTION DESIGN.png" }, 
-        { type: "video", src: "/soulfest faiz (1).mp4" }
+        { type: "video", src: "/soulfest faiz (1).mp4" },
+        { type: "video", src: "/1000117783.mp4" }
       ]
     },
     {
