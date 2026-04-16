@@ -90,7 +90,7 @@ const Portfolio = () => {
         { type: "image", src: "/3D.png" },
         { type: "video", src: "/Penyuu.mp4" },
         { type: "video", src: "/kilang.mp4" }
-        { type: "video", src: "/public/instasave.website_AQMJ_u2_I1WpkKRWR4_irXfEV6hi27IaH5ZoTCbQGwd80JpJCTEZrKuyRYVu6uofNwkzUXdBREEFaEd3BYd9KgroSYo04z_O4XsQddQ.mp4" }
+        { type: "video", src: "/instasave.website_AQMJ_u2_I1WpkKRWR4_irXfEV6hi27IaH5ZoTCbQGwd80JpJCTEZrKuyRYVu6uofNwkzUXdBREEFaEd3BYd9KgroSYo04z_O4XsQddQ.mp4" }
       ]
     }
   ];
