@@ -90,7 +90,10 @@ const Portfolio = () => {
       gallery: [
         { type: "image", src: "/3D.png" },
         { type: "video", src: "/Penyuu.mp4" },
-        { type: "video", src: "/kilang.mp4" }
+        { type: "video", src: "/kilang.mp4" },
+        { type: "video", src: "/1000117780.mp4" },
+        { type: "video", src: "/1000117781.mp4" },
+        { type: "video", src: "/1000117782.mp4" }
       ]
     }
   ];
