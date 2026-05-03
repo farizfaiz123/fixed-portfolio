@@ -96,7 +96,17 @@ const Portfolio = () => {
         { type: "video", src: "/1000117782.mp4" }
       ]
     }
-  ];
+    {
+      title: "GOBBERGRIN",
+      category: "BRANDING",
+      description: "GOBBERGRIN is a bold character-driven brand built on energy. humor, and unfilterad fun. We create products and experiences that make people grin big and stand out loud.",
+      tools: ["Illustrator", "Photoshop"],
+      gallery: [
+        { type: "image", src: "/IMG_1140.png" }, 
+        { type: "image", src: "/Cup Mockup.png" },
+        { type: "image", src: "/cap gobbergrin.pmg" }
+      ]
+    },
 
   const experiences = [
     {
