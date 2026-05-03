@@ -95,7 +95,7 @@ const Portfolio = () => {
         { type: "video", src: "/1000117781.mp4" },
         { type: "video", src: "/1000117782.mp4" }
       ]
-    }
+    },
     {
       title: "GOBBERGRIN",
       category: "BRANDING",
